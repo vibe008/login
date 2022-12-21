@@ -1,0 +1,39 @@
+.navabar{
+    display: flex;
+    justify-content: space-between;
+    background: skyblue;
+    height: 92px;
+    align-items: center;
+}
+.area{
+    margin-left: 40px;
+    display: flex;
+    justify-content: space-between;
+    width: 98px;
+}
+.scaner{
+    width: 300px;
+    height: 400px;
+    border: 1px solid ;
+    border-radius: 5px;
+    margin: 10px;
+}
+.scan{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    margin-top: 78px;
+}
+.scanbtn{
+    width: 250px;
+    background: skyblue;
+}
+.logout{
+    display: flex;
+    justify-content: space-between;
+    /* width: 61px; */
+    /* background: aliceblue; */
+    margin-right: 27px;
+}
