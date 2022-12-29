@@ -1,28 +1,59 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './Box.css'
-import { Link } from "react-router-dom"
-function box() {
+import Form from 'react-bootstrap/Form';
+// import { Link } from "react-router-dom"
+import Area1 from './area/Area1';
+
+function Box(props) {
+
+const [ procede , setProcede] = useState(false)
+const [page ,  setPage] = useState(false)
+const [dropvalue ,  setDropValue] = useState(false)
+const [dataresp , setDataresp] = useState('')
+
+
+const procedebtn = ()=>{
+  setPage(!page)
+  setDataresp(props.response)
+}
+
+const openarea = (e) =>{
+  setProcede(true)
+  let val = e.target.value
+  setDropValue(val)
+ console.log(val);
+} 
+
+
+
   return (
     <>
-    <section className='section'>
-    <div className="container">
-
-      <div className="box">
-        <Link to="/Area1">  <button type="button" className="btn btn-light  linkbtn">Area 1</button> </Link>
-      </div>
-
-      <div className="box">
-      <Link to="/Area2"> <button type="button" className="btn btn-light  linkbtn">Area 2</button> </Link>
-      </div>
-
-      <div className="box">
-      <Link to="/Area3"> <button type="button" className="btn btn-light  linkbtn">Area 3</button>  </Link>
+{page ? <Area1 dropvalue={dropvalue} dataresp={dataresp} uid={props.response.message.uid} procedebtn={procedebtn}/>  :
+  <div className='menubar'>
+  <div  className=" ">
+  <Form.Select onChange={openarea}  aria-label="Default select example ">
+    
+    <option > Select Area </option>
+    {props.response.message.userareamappings.map((data , index)=>{
       
-      </div>
-    </div>
-      </section>
+    
+      return(
+        <option key={index} value={data.areaid} >{(data.category!=null)?data.category.categoryname_en:data.adon.title_en}</option>
+      )
+    })}
+        {/* <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option> */}
+      </Form.Select>
+  
+  
+      <button disabled={procede===false} className='btn btn-secondary procedebtn' onClick={procedebtn} > 
+       procede  </button>
+  </div>
+  </div>  }
+
     </>
   )
 }
 
-export default box
+export default Box

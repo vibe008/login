@@ -31,9 +31,12 @@
     background: skyblue;
 }
 .logout{
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    /* width: 61px; */
+    width: 139px;
+    height: 100px;
     /* background: aliceblue; */
     margin-right: 27px;
 }
+

@@ -1,20 +1,15 @@
+.menubar{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
 
-.section{
-
-    width: 100%;
-
-    /* background: radial-gradient(black, transparent); */
-    text-align: center;
-    /* margin: auto; */
-    margin: 40px auto;
-    margin: 143px auto;
 }
-
-.box{
-    margin: 20px;
+.procedebtn{
+    margin-left: 20px;
+    margin-top: 20px;
 }
-.linkbtn{
-    padding: 10px;
-    background: skyblue;
-    width: 340px;
+.linkarea{
+    color: white;
+    text-decoration: none;
 }
