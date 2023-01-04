@@ -1,4 +1,4 @@
-.navabar{
+/* .navabar{
     display: flex;
     justify-content: space-between;
     background: skyblue;
@@ -36,7 +36,32 @@
     justify-content: space-between;
     width: 139px;
     height: 100px;
-    /* background: aliceblue; */
     margin-right: 27px;
 }
 
+@media only screen and (max-width: 768px) {
+    .logout {
+      flex-direction: column;
+    }
+  } */
+
+  .areanav{
+color: white;
+  }
+  .secondnav{
+    width: 90%;
+    margin: auto;
+    padding-top: 24px;
+    justify-content: space-between;
+  }
+  .icon i {
+    font-size: 30px;
+  }
+  .scan{
+    width: 100%;
+    /* background: #d6cfdc; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+  }

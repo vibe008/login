@@ -10,6 +10,7 @@ const [ procede , setProcede] = useState(false)
 const [page ,  setPage] = useState(false)
 const [dropvalue ,  setDropValue] = useState(false)
 const [dataresp , setDataresp] = useState('')
+const [count , setCount] = useState(0)
 
 
 const procedebtn = ()=>{
@@ -28,27 +29,27 @@ const openarea = (e) =>{
 
   return (
     <>
-{page ? <Area1 dropvalue={dropvalue} dataresp={dataresp} uid={props.response.message.uid} procedebtn={procedebtn}/>  :
-  <div className='menubar'>
-  <div  className=" ">
+{page ? <Area1 dropvalue={dropvalue} dataresp={dataresp} uid={props.response.message.uid} procedebtn={procedebtn} count={count} setCount={setCount} />  :
+  <div className='menubar p-3'>
+  <div  className="selectedform">
   <Form.Select onChange={openarea}  aria-label="Default select example ">
     
-    <option > Select Area </option>
+    <option >  </option>
     {props.response.message.userareamappings.map((data , index)=>{
       
     
       return(
-        <option key={index} value={data.areaid} >{(data.category!=null)?data.category.categoryname_en:data.adon.title_en}</option>
+        <option key={index} value={data.areaid+'&'+((data.category!=null)?data.category.categoryname_en:data.adon.title_en)} >{(data.category!=null)?data.category.categoryname_en:data.adon.title_en}</option>
       )
     })}
         {/* <option value="1">One</option>
         <option value="2">Two</option>
         <option value="3">Three</option> */}
       </Form.Select>
-  
-  
       <button disabled={procede===false} className='btn btn-secondary procedebtn' onClick={procedebtn} > 
        procede  </button>
+  
+  
   </div>
   </div>  }
 

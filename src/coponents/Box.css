@@ -1,9 +1,17 @@
 .menubar{
-    display: flex;
+    width: 100%;
     align-items: center;
     height: 100vh;
+    margin: auto;
+    max-width: 758px;
+    display: flex;
+}
+.selectedform{
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
     justify-content: center;
-
 }
 .procedebtn{
     margin-left: 20px;

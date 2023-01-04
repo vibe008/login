@@ -36,8 +36,8 @@ const loginclick =async (e)=>{
 }
   return (
     <>
-    {!isLogin ?       <section className='login'>
-      <div className="login">
+    {!isLogin ?       <section >
+      <div className="login p-3">
   <div className="login-triangle"></div>
   
   <h2 className="login-header">Manager Login</h2>

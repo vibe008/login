@@ -1,5 +1,8 @@
 
 import './App.css';
+
+// import Area2 from './coponents/area/Area2';
+
 import Login from './coponents/Login';
 // import { Routes, Route,  } from "react-router-dom";
 // import Area1 from './coponents/area/Area1';
@@ -11,7 +14,9 @@ function App() {
   
   return (
  <>
+ {/* <Area2/> */}
 <Login/>
+
  {/* <Routes>
        <Route path="/" element={ <Login/>} />
        <Route path="/" element={<Box/>} />
